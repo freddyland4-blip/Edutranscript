@@ -1,0 +1,42 @@
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.theme-switcher button[data-mode] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper);
+    color: var(--ink);
+    cursor: pointer;
+    transition: background 200ms ease, border-color 200ms ease, transform 120ms ease;
+}
+.theme-switcher button[data-mode].active,
+.theme-switcher button[data-mode]:hover {
+    background: var(--blue);
+    color: var(--paper);
+    border-color: transparent;
+    transform: translateY(-1px);
+}
+.theme-switcher button[data-mode] svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+.theme-switcher label {
+    font-weight: 700;
+    color: var(--muted);
+}
+.theme-switcher select {
+    min-width: 125px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: var(--paper);
+    color: var(--ink);
+}
